@@ -1,0 +1,17 @@
+section {
+    &:lang(ar) {
+      direction: ltr;
+    }
+  }
+  
+  .title {
+      @apply relative;
+      &::after {
+        content: "";
+        @apply absolute w-full block bottom-0 pt-[5px] pr-[10px] pb-[10px] pl-[10px];
+        background: url("/images/Decore.svg");
+        background-repeat: no-repeat;
+        background-position: right;
+      }
+  }
+  

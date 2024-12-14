@@ -1,0 +1,12 @@
+.animated-img {
+  animation: rotate360 2s linear 0.5s infinite; /* Animation properties */
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

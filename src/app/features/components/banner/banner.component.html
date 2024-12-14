@@ -1,0 +1,52 @@
+
+<section class="bg-white h-100">
+    <ng-container *ngFor="let slide of bannerSlides; let i = index">
+      <div class="container mx-auto " *ngIf="selectedIdx==slide.id">
+        <div class="flex justify-between items-center py-10  w-full h-full">
+          <!-- home heading -->
+          <div class="flex-col space-y-6 px-12">
+            <p class="uppercase text-xl font-bold text-400" [ngStyle]="{'color':'#'+slide.colorCode}">
+              {{ slide.category }}
+            </p>
+            <p class="text-5xl font-bold w-96 title" >{{ slide.title }}</p>
+            <p class="w-2/4 text-semiBlue">
+              {{ slide.brief }}
+            </p>
+            <div class="flex items-center">
+              <button class="btn bg-orange-500 text-white hover:bg-white hover:text-orange-500 shadow-md capitalize">
+                Find out more
+              </button>
+              <button class="py-2 mx-7 inline-flex items-center">
+                <ng-container [ngTemplateOutlet]="playIcon"></ng-container>
+                <span class="mx-2 hover:underline">Play Demo</span>
+              </button>
+            </div>
+            <div class=" flex justify-between transform translate-y-full ">
+              <div class="indicator flex items-center gap-4">
+                <ng-container *ngFor="let slide of bannerSlides;let j=index">
+                  <a class="badge badge-lg border-0" [href]="'#sl'+slide.id" [ngStyle]="{'background-color':'#'+slide.colorCode}"
+                    (click)="changeBanner(slide.id)" [ngClass]="{'scale-150':i==j}"></a>
+                  <div class="border-b-4 border-oldGrey  border-dotted w-16" *ngIf="j!=bannerSlides.length-1"></div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+          <!-- Traveller image -->
+          <div class="relative z-[11] home-traveller">
+            <img class="w-full hidden md:block xl:right-64 relative" src="/images/Traveller.svg" />
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </section>
+  <ng-template #playIcon>
+    <div class="bg-red-500 rounded-full">
+      <div class="w-11 h-11 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+          <path id="Polygon_1" data-name="Polygon 1" d="M7.5,0,15,15H0Z" transform="translate(15) rotate(90)"
+            fill="#fff" />
+        </svg>
+      </div>
+    </div>
+  </ng-template>
+  

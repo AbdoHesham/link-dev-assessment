@@ -1,0 +1,13 @@
+.about-image {
+    @apply relative flex justify-center;
+    img {
+        @apply transition ease-in-out w-48 hover:brightness-50 duration-200
+    }
+    p {
+        @apply absolute text-white font-bold bottom-16;
+    }
+}
+
+:lang(ar) .about{
+    @apply xl:right-[14rem]
+}

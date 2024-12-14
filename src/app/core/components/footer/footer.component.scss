@@ -1,0 +1,10 @@
+.apps-btn {
+    @apply text-white bg-[#050708] hover:bg-gray-600 focus:ring-4 focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 ml-0 mb-2;
+    &:lang(ar) {
+        @apply ml-2 mr-0;
+    }
+}
+
+.social-media-btn {
+    @apply w-9 h-9 rounded-full flex items-center justify-center text-center bg-white shadow-xl transition duration-500 hover:scale-125 hover:invert;
+}

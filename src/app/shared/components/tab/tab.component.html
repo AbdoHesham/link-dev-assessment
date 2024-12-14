@@ -1,0 +1,7 @@
+<button
+  (click)="handelChangeTab()"
+  class="bg-grey tab flex-1 text-black border-b-0 pb-8 mx-auto block rounded-lg hover:bg-gray-300"
+  [ngClass]="{ 'text-lightGrey font-semibold border-b-0 bg-lightBlue hover:bg-sky-400': active }"
+>
+  <ng-content></ng-content>
+</button>

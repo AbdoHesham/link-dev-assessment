@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,800;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,800;1,100&family=Volkhov:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Kefa', sans-serif;
+    src: url("/fonts/Poppins-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  .text-initial {
+    text-align: initial;
+  }
+  .btn {
+    @apply font-bold py-2 px-4 rounded;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}

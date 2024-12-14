@@ -1,0 +1,8 @@
+<div class="relative bg-white overflow-hidden">
+    <app-header></app-header>
+    <app-banner  (onChangeBanner)="onBannerChanged($event)"></app-banner>
+    <div class="absolute -top-1/4 right-0 transform translate-x-1/4 scale-x-125 w-1/2 h-full ">
+      <img class="animated-img" [src]="'/images/'+selectedDecore">
+    </div>
+  </div>
+  
